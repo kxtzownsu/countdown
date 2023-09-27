@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-</head>
-<body>
-    <div id="countdown"></div>
-
+    <meta name="title" content="Rafflesia Countdown - kxtzownsu">
+    <meta name="description" content="Simple countdown made in JS & HTML that counts down to the day Rafflesia returns from the psych ward. Made by kxtzownsu :3">
+    <meta property="og:title" content="Rafflesia Countdown - kxtzownsu">
+    <meta property="og:description" content="Simple countdown made in JS & HTML that counts down to the day Rafflesia returns from the psych ward. Made by kxtzownsu :3">
+    <meta property="og:image" content="https://mercurywork.shop/assets/pfps/raff.webp">
+    <meta property="og:image:width" content="1600">
+    <meta property="og:image:height" content="1500">
+    <title>Rafflesia Countdown - kxtzownsu</title>
+  </head>
+  <body>
+    <center>
+      <h1>Rafflesia Return is in:</h1>
+      <h3 id="countdown"></h3>
+      <p>Made by kxtzownsu :3</p>
+    </center>
     <script>
-        // Specify the target timestamp in UTC (Coordinated Universal Time)
-        const targetTimestamp = Date.UTC(2023, 9, 4, 0, 0, 0); // December 31, 2023, 23:59:59 UTC
-
-        function updateCountdown() {
-            const currentDate = new Date().getTime();
-            const timeDifference = targetTimestamp - currentDate;
-
-            if (timeDifference <= 0) {
-                // The countdown has reached or passed the target date
-                document.getElementById("countdown").innerHTML = "Countdown expired!";
-            } else {
-                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-                document.getElementById("countdown").innerHTML = `
-                    ${days}: 
-                    ${hours}: 
-                    ${minutes}: 
-                    ${seconds}
+      // Specify the target timestamp in UTC (Coordinated Universal Time)
+      const targetTimestamp = Date.UTC(2023, 9, 4, 0, 0, 0); // December 31, 2023, 23:59:59 UTC
+      function updateCountdown() {
+        const currentDate = new Date().getTime();
+        const timeDifference = targetTimestamp - currentDate;
+        if (timeDifference <= 0) {
+          // The countdown has reached or passed the target date
+          document.getElementById("countdown").innerHTML = "Rafflesia is back!";
+        } else {
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+          document.getElementById("countdown").innerHTML = `
+                    ${days}d  
+                    ${hours}h 
+                    ${minutes}m  
+                    ${seconds}s 
                 `;
-            }
         }
-
-        // Update the countdown every second
-        setInterval(updateCountdown, 1000);
-
-        // Initial call to set the countdown on page load
-        updateCountdown();
+      }
+      // Update the countdown every second
+      setInterval(updateCountdown, 1000);
+      // Initial call to set the countdown on page load
+      updateCountdown();
     </script>
-</body>
+  </body>
 </html>
