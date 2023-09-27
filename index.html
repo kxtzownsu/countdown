@@ -1,1 +1,44 @@
-<p>hi</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <div id="countdown"></div>
+
+    <script>
+        // Specify the target timestamp in UTC (Coordinated Universal Time)
+        const targetTimestamp = Date.UTC(2023, 9, 4, 0, 0, 0); // December 31, 2023, 23:59:59 UTC
+
+        function updateCountdown() {
+            const currentDate = new Date().getTime();
+            const timeDifference = targetTimestamp - currentDate;
+
+            if (timeDifference <= 0) {
+                // The countdown has reached or passed the target date
+                document.getElementById("countdown").innerHTML = "Countdown expired!";
+            } else {
+                const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = `
+                    ${days} days 
+                    ${hours} hours 
+                    ${minutes} minutes 
+                    ${seconds} seconds
+                `;
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+
+        // Initial call to set the countdown on page load
+        updateCountdown();
+    </script>
+</body>
+</html>
