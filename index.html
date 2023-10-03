@@ -21,13 +21,13 @@
     </center>
     <script>
       // Specify the target timestamp in UTC (Coordinated Universal Time)
-      const targetTimestamp = Date.UTC(2023, 9, 4, 4, 0, 0);
+      const targetTimestamp = Date.UTC(2023, 8, 4, 4, 0, 0);
       function updateCountdown() {
         const currentDate = new Date().getTime();
         const timeDifference = targetTimestamp - currentDate;
         if (timeDifference <= 0) {
           // The countdown has reached or passed the target date
-          document.getElementById("countdown").innerHTML = "Rafflesia is back!";
+          document.getElementById("countdown").innerHTML = "SHES BACK NO WAY :shock:";
         } else {
           const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
           const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
