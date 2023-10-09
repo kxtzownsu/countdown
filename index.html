@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="darkreader-lock">
-    <meta name="title" content="Rafflesia Countdown - kxtzownsu">
-    <meta name="description" content="Simple countdown made in JS & HTML that counts down to the day Rafflesia returns from the psych ward. Made by kxtzownsu :3">
-    <meta property="og:title" content="Rafflesia Countdown - kxtzownsu">
-    <meta property="og:description" content="Simple countdown made in JS & HTML that counts down to the day Rafflesia returns from the psych ward. Made by kxtzownsu :3">
-    <meta property="og:image" content="https://mercurywork.shop/assets/pfps/raff.webp">
+    <meta name="title" content="Vida Countdown - kxtzownsu">
+    <meta name="description" content="Simple countdown made in JS & HTML that counts down to the day Vida returns from the psych ward. Made by kxtzownsu :3">
+    <meta property="og:title" content="Vida Countdown - kxtzownsu">
+    <meta property="og:description" content="Simple countdown made in JS & HTML that counts down to the day Vida returns from rehab. Made by kxtzownsu :3">
+    <meta property="og:image" content="https://images-ext-1.discordapp.net/external/ypXFeAGltbkTqRnpYy_-kQMZHtQLAjXi4ijLIgwFYQ8/%3Fsize%3D1024%26width%3D0%26height%3D256/https/cdn.discordapp.com/avatars/1120583772769890318/ab6f5ab3f6db53add31e898b3901c2c5.webp">
     <meta property="og:image:width" content="1600">
     <meta property="og:image:height" content="1500">
-    <title>Rafflesia Countdown - kxtzownsu</title>
+    <title>Vida Countdown - kxtzownsu</title>
   </head>
   <body>
     <center>
-      <h1>Rafflesia Return is in:</h1>
+      <h1>Vida Return is in:</h1>
       <h3 id="countdown"></h3>
       <p>Made by kxtzownsu :3</p>
     </center>
     <script>
       // Specify the target timestamp in UTC (Coordinated Universal Time)
-      const targetTimestamp = Date.UTC(2023, 8, 4, 4, 0, 0);
+      const targetTimestamp = Date.UTC(2023, 9, 16, 4, 0, 0);
       function updateCountdown() {
         const currentDate = new Date().getTime();
         const timeDifference = targetTimestamp - currentDate;
         if (timeDifference <= 0) {
           // The countdown has reached or passed the target date
-          document.getElementById("countdown").innerHTML = "SHES BACK NO WAY :shock:";
+          document.getElementById("countdown").innerHTML = "THEY'RE BACK NO WAY :shock:";
         } else {
           const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
           const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
