@@ -1,2 +1,5 @@
-# rafflesia-countdown
-Countdown to when Rafflesia returns (I think)
+# Countdown
+Basic HTML + JS countdown written by me
+
+Theme used:
+Catppuccin Mocha
